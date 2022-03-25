@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!doctype html>
 <html lang="kor">
   <head>
@@ -6,7 +13,7 @@
 
     <link href="../../../bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>로그인 페이지</title>
+    <title>ë¡ê·¸ì¸ íì´ì§</title>
   </head>
  <style type="text/css">
 
@@ -72,28 +79,28 @@
 	<div class="container">
 	
 	 <h1 class="logo"><font color="#bebebe">YES</font><font color="#0064FF">24</font></h1>
-	 <h3 class="login">로그인 페이지</h3>
+	 <h3 class="login">ë¡ê·¸ì¸ íì´ì§</h3>
 		
 		<div class="input-group col-sm-6 mb-3">
-		 <input type="text" class="form-control" id="name" placeholder="아이디">
+		 <input type="text" class="form-control" id="name" placeholder="ìì´ë">
 		</div>
 
 		<div class="input-group col-sm-6 mb-3">
-		 <input type="text" class="form-control" id="name" placeholder="비밀번호">
+		 <input type="text" class="form-control" id="name" placeholder="ë¹ë°ë²í¸">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
 		 <input class="form-check-input" type="checkbox" value="" id="remember">
-		 <label class="form-check-label" for="agree1"> 자동 로그인
+		 <label class="form-check-label" for="agree1"> ìë ë¡ê·¸ì¸
 		</div>	
 		
-		<h6 class="joingo">아이디가 없으시다면? <a href="#"><b>회원가입</b></a></h6>
+		<h6 class="joingo">ìì´ëê° ìì¼ìë¤ë©´? <a href="#"><b>íìê°ì</b></a></h6>
 	
 		<div class="d-grid gap-2">
-		 <button class="btn btn-dark" type="button">로그인</button>
-		 <button class="btn btn-warning" type="button">카카오톡 로그인</button>
-		 <button class="btn btn-danger" type="button">구글 로그인</button>
-		 <button class="btn btn-success" type="button">네이버 로그인</button>
+		 <button class="btn btn-dark" type="button">ë¡ê·¸ì¸</button>
+		 <button class="btn btn-warning" type="button">ì¹´ì¹´ì¤í¡ ë¡ê·¸ì¸</button>
+		 <button class="btn btn-danger" type="button">êµ¬ê¸ ë¡ê·¸ì¸</button>
+		 <button class="btn btn-success" type="button">ë¤ì´ë² ë¡ê·¸ì¸</button>
 		</div>
 	
 	</div>

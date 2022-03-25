@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!doctype html>
 <html lang="kor">
   <head>
@@ -6,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>책 정보 관리</title>
+    <title>ì± ì ë³´ ê´ë¦¬</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -83,10 +90,10 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">코드 그룹 관리</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">회원 관리</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">리뷰 관리</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">책 정보 관리</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì½ë ê·¸ë£¹ ê´ë¦¬</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">íì ê´ë¦¬</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ë¦¬ë·° ê´ë¦¬</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì± ì ë³´ ê´ë¦¬</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
@@ -95,13 +102,13 @@
       </div>
     </header>
 	
-	<h1 class="book">책 정보 관리</h1>
+	<h1 class="book">ì± ì ë³´ ê´ë¦¬</h1>
 	
     <div class="p-4 p-md-5 mb-4 text-dark rounded bg-light">
 	 
     <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>삭제 여부</option>
+     <option selected>ì­ì  ì¬ë¶</option>
      <option value="1">N</option>
      <option value="2">Y</option>
     </select>
@@ -109,17 +116,17 @@
  
      <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>검색 조건</option>
-     <option value="1">도서 제목</option>
-     <option value="2">지은이</option>
-     <option value="3">출판사</option>
+     <option selected>ê²ì ì¡°ê±´</option>
+     <option value="1">ëì ì ëª©</option>
+     <option value="2">ì§ìì´</option>
+     <option value="3">ì¶íì¬</option>
      </select>
       </div>
            
       <div class="col-3 md-6 px-0">        
-       <input type="password" class="form-control" id="password" placeholder="검색어를 입력하세요.">
-       <button type="button" class="btn btn-warning">검색</button>
-       <button type="button" class="btn btn-danger">초기화</button>     
+       <input type="password" class="form-control" id="password" placeholder="ê²ìì´ë¥¼ ìë ¥íì¸ì.">
+       <button type="button" class="btn btn-warning">ê²ì</button>
+       <button type="button" class="btn btn-danger">ì´ê¸°í</button>     
       </div>   
   </div>
   
@@ -130,24 +137,24 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">도서 이름</th> 
-	     <th scope="col">지은이</th>
-	     <th scope="col">출판사</th>
-	     <th scope="col">책 등록 일자</th>	       
+	     <th scope="col">ì²´í¬ë°ì¤</th>
+	     <th scope="col">ë²í¸</th>
+	     <th scope="col">ëì ì´ë¦</th> 
+	     <th scope="col">ì§ìì´</th>
+	     <th scope="col">ì¶íì¬</th>
+	     <th scope="col">ì± ë±ë¡ ì¼ì</th>	       
 	    </tr>
 	   </thead>
 
 	   <tbody>
 
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">도서 이름</th>
-	     <th scope="col">지은이</th>
-	     <th scope="col">출판사</th>
-	     <th scope="col">책 등록 일자</th> 	 	     
+	     <th scope="col">ì²´í¬ë°ì¤</th>
+	     <th scope="col">ë²í¸</th>
+	     <th scope="col">ëì ì´ë¦</th>
+	     <th scope="col">ì§ìì´</th>
+	     <th scope="col">ì¶íì¬</th>
+	     <th scope="col">ì± ë±ë¡ ì¼ì</th> 	 	     
 	    </tr>	      
  
 	    </tbody>
@@ -159,8 +166,8 @@
 	<div class="row">
 	 <div class="col">
 	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-	   <button class="btn btn-dark" type="button">등록</button>
-	   <button class="btn btn-dark" type="button">삭제</button>
+	   <button class="btn btn-dark" type="button">ë±ë¡</button>
+	   <button class="btn btn-dark" type="button">ì­ì </button>
 	 </div>
 	 </div>
 	</div>

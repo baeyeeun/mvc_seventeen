@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!doctype html>
 <html lang="kor">
   <head>
@@ -6,7 +13,7 @@
 
     <link href="../../../bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>로그인 페이지</title>
+    <title>ë¡ê·¸ì¸ íì´ì§</title>
   </head>
  <style type="text/css">
 
@@ -72,11 +79,11 @@
 	<div class="container">
 	
 	 <h1 class="logo"><font color="#bebebe">YES</font><font color="#0064FF">24</font></h1>
-	 <h3 class="logout">로그아웃</h3>
+	 <h3 class="logout">ë¡ê·¸ìì</h3>
 		
 		
-		<h6 class="logout1">로그아웃이 정상적으로 되었습니다.</h6>
-		<h6 class="logout1">이용해 주셔서 감사합니다.</h6>	
+		<h6 class="logout1">ë¡ê·¸ììì´ ì ìì ì¼ë¡ ëììµëë¤.</h6>
+		<h6 class="logout1">ì´ì©í´ ì£¼ìì ê°ì¬í©ëë¤.</h6>	
 
 	
 	</div>

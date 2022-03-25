@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!doctype html>
 <html lang="kor">
   <head>
@@ -6,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>책 등록 정보</title>
+    <title>ì± ì ë³´ ë±ë¡</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -101,10 +108,10 @@
 
        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
        <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">코드 그룹 관리</a></li>      
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">회원 관리</a></li>
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">리뷰 관리</a></li>
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">책 정보 관리</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì½ë ê·¸ë£¹ ê´ë¦¬</a></li>      
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">íì ê´ë¦¬</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">ë¦¬ë·° ê´ë¦¬</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì± ì ë³´ ê´ë¦¬</a></li>
        </ul>
 
       <div class="col-md-3 text-end">
@@ -113,68 +120,68 @@
       </div>
      </header>
     
-      <h1 class="bookadd">책 등록 정보</h1>
+      <h1 class="bookadd">ì± ì ë³´ ë±ë¡</h1>
       
 		<div="row mt-sm-4">
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookname">책 이름</label>
+		 <label for="bookname">ì± ì´ë¦</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookname" placeholder="">
 		</div>
     	 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="booksub">책 부제</label>
+		 <label for="booksub">ì± ë¶ì </label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="booksub" placeholder="">
 		</div>
 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookwrite">작가</label>
+		 <label for="bookwrite">ìê°</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookwrite" placeholder="">
 		</div>	
 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookpub">출판사</label>
+		 <label for="bookpub">ì¶íì¬</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookpub" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookdate">출간일</label>
+		 <label for="bookdate">ì¶ê°ì¼</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="date" class="form-control" id="bookdate" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookprice">가격</label>
+		 <label for="bookprice">ê°ê²©</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookprice" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookpage">책 페이지</label>
+		 <label for="bookpage">ì± íì´ì§</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookpage" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookweight">책 무게</label>
+		 <label for="bookweight">ì± ë¬´ê²</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookweight" placeholder="">
 		</div>
 		    	 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="booksize">책 사이즈</label>
+		 <label for="booksize">ì± ì¬ì´ì¦</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="booksize" placeholder="">
@@ -195,8 +202,8 @@
 		</div>
 						      
 		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-		  <button class="btn btn-dark me-md-2" type="button">등록</button>
-		  <button class="btn btn-dark" type="button">취소</button>
+		  <button class="btn btn-dark me-md-2" type="button">ë±ë¡</button>
+		  <button class="btn btn-dark" type="button">ì·¨ì</button>
 		</div>
       
         </div>     
