@@ -4,8 +4,12 @@ import java.util.List;
 
 public interface MemberService {
 	
-	public List<Member> selectList() throws Exception; 
-	public int insert(Member dto) throws Exception; 
+	int selectOneCount(MemberVo vo) throws Exception;
+	List<Member> selectList(MemberVo vo) throws Exception; 
+	int insert(Member dto) throws Exception;
+	Member selectOne(MemberVo vo) throws Exception;
 	int update(Member dto) throws Exception;
+	int updelete(MemberVo vo) throws Exception;
+	int delete(MemberVo vo) throws Exception;
 	
 }

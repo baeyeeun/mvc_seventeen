@@ -12,12 +12,14 @@ public class MemberServiceImpl implements MemberService{
 	MemberDao dao;
 	
 	@Override
-	public List<Member> selectList() throws Exception {
-		return dao.selectList(); 
+	public List<Member> selectList(MemberVo vo) throws Exception {
+		
+		return dao.selecList(vo);
 	}
 	
 	@Override
 	public int insert(Member dto) throws Exception {
+	
 		return dao.insert(dto); 
 	}
 	
@@ -25,6 +27,30 @@ public class MemberServiceImpl implements MemberService{
 	public int update(Member dto) throws Exception {
 		return dao.update(dto);
 	}
+	
+	@Override
+	public int selectOneCount(MemberVo vo) throws Exception {
+		return dao.selectOneCount(vo);
+	}
+	
+	@Override
+	public Member selectOne(MemberVo vo) throws Exception {
+		return dao.selectOne(vo);
+	}
+	
+	@Override
+	public int updelete(MemberVo vo) throws Exception {
+		
+		return dao.delete(vo);
+	}
+	
+	@Override
+	public int delete(MemberVo vo) throws Exception {
+		
+		return dao.updateDelet(vo);
+	}
+	
+	
 	
 	
 }

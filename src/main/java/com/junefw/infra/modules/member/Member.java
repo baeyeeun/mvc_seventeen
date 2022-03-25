@@ -8,27 +8,34 @@ public class Member {
 	private String ifmmName;
 	private Integer ifmmAdminNy;
 	private Integer ifmmDelNy;
+	private String ifmmDesc;
 	
+	private Integer ifmaDefaultNy;
 	private Integer ifmaTypeCd;
 	private String ifmaTitle;
 	private String ifmaAddress1;
 	private String ifmaAddress2;
 	private String ifmaZipCode;
 	private Integer ifmaDelNy;
+	private String ifmaDesc;
 
+	private Integer ifmeDefaultNy;
 	private Integer ifmeTypeCd;
 	private String ifmeEmailFull;
 	private String ifmeAccount;
 	private String ifmeDomain;
 	private Integer ifmeDelNy;
+	private String ifmeDesc;	
 
+	private Integer ifmpDefaultNy;
 	private Integer ifmpTypeCd;
 	private Integer ifmpDeviceCd;
 	private Integer ifmpTelecomCd;
 	private String ifmpNumber;
 	private Integer ifmpDelNy;
+	private String ifmpDesc;
 	
-	//------------------------
+	//--------------------------------------
 	
 	public String getIfmmSeq() {
 		return ifmmSeq;
@@ -48,11 +55,23 @@ public class Member {
 	public void setIfmmName(String ifmmName) {
 		this.ifmmName = ifmmName;
 	}
+	public Integer getIfmmAdminNy() {
+		return ifmmAdminNy;
+	}
+	public void setIfmmAdminNy(Integer ifmmAdminNy) {
+		this.ifmmAdminNy = ifmmAdminNy;
+	}
 	public Integer getIfmmDelNy() {
 		return ifmmDelNy;
 	}
 	public void setIfmmDelNy(Integer ifmmDelNy) {
 		this.ifmmDelNy = ifmmDelNy;
+	}
+	public String getIfmmDesc() {
+		return ifmmDesc;
+	}
+	public void setIfmmDesc(String ifmmDesc) {
+		this.ifmmDesc = ifmmDesc;
 	}
 	public Integer getIfmaTypeCd() {
 		return ifmaTypeCd;
@@ -90,6 +109,12 @@ public class Member {
 	public void setIfmaDelNy(Integer ifmaDelNy) {
 		this.ifmaDelNy = ifmaDelNy;
 	}
+	public String getIfmaDesc() {
+		return ifmaDesc;
+	}
+	public void setIfmaDesc(String ifmaDesc) {
+		this.ifmaDesc = ifmaDesc;
+	}
 	public Integer getIfmeTypeCd() {
 		return ifmeTypeCd;
 	}
@@ -119,6 +144,12 @@ public class Member {
 	}
 	public void setIfmeDelNy(Integer ifmeDelNy) {
 		this.ifmeDelNy = ifmeDelNy;
+	}
+	public String getIfmeDesc() {
+		return ifmeDesc;
+	}
+	public void setIfmeDesc(String ifmeDesc) {
+		this.ifmeDesc = ifmeDesc;
 	}
 	public Integer getIfmpTypeCd() {
 		return ifmpTypeCd;
@@ -150,14 +181,32 @@ public class Member {
 	public void setIfmpDelNy(Integer ifmpDelNy) {
 		this.ifmpDelNy = ifmpDelNy;
 	}
-	public Integer getIfmmAdminNy() {
-		return ifmmAdminNy;
+	public String getIfmpDesc() {
+		return ifmpDesc;
 	}
-	public void setIfmmAdminNy(Integer ifmmAdminNy) {
-		this.ifmmAdminNy = ifmmAdminNy;
+	public void setIfmpDesc(String ifmpDesc) {
+		this.ifmpDesc = ifmpDesc;
 	}
+	public Integer getIfmaDefaultNy() {
+		return ifmaDefaultNy;
+	}
+	public void setIfmaDefaultNy(Integer ifmaDefaultNy) {
+		this.ifmaDefaultNy = ifmaDefaultNy;
+	}
+	public Integer getIfmeDefaultNy() {
+		return ifmeDefaultNy;
+	}
+	public void setIfmeDefaultNy(Integer ifmeDefaultNy) {
+		this.ifmeDefaultNy = ifmeDefaultNy;
+	}
+	public Integer getIfmpDefaultNy() {
+		return ifmpDefaultNy;
+	}
+	public void setIfmpDefaultNy(Integer ifmpDefaultNy) {
+		this.ifmpDefaultNy = ifmpDefaultNy;
+	}
+	
 
- //--------------------------------------
 	
 	
 

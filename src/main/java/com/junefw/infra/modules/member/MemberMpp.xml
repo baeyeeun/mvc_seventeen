@@ -8,19 +8,48 @@
 
     <resultMap id="resultMapObj" type="com.junefw.infra.modules.member.Member"></resultMap>
 
+		<sql id="selectCommon">
+			FROM  
+				infrMember a 
+			WHERE 1=1
+				AND ifmmDelNy = 0
+		</sql>
 	
-	<select id="selectList" resultMap="resultMapObj">
-			select
-				ifmmSeq
-				, ifmmId
-				, ifmmName
-                , ifmmDelNy
-			from
-				infrMember
+		<select id="selectOneCount" resultType="Integer">
+			SELECT
+				count(*)
+		<include refid="selectCommon" />
 
-	</select>
+		</select>
 	
-	<insert id="insert">
+		<select id="selectList" resultMap="resultMapObj">
+			SELECT
+				a.ifmmSeq
+			 	,a.ifmmAdminNy
+			 	,a.ifmmId
+			 	,a.ifmmName
+			 	,a.ifmmDelNy
+			 	,a.ifmmDesc
+			 	,b.ifmaAddress1
+			 	,b.ifmaAddress2
+			 	,b.ifmaZipCode
+			 	,b.ifmaDelNy
+			 	,c.ifmeEmailFull
+			 	,c.ifmeDelNy
+			 	,d.ifmpNumber
+			 	,d.ifmpDelNy
+			 	
+			 FROM
+				infrMember a
+			 LEFT JOIN infrMemberAddress b ON b.ifmaDelNy = 0 AND b.ifmaDefaultNy = 1 AND b.ifmmSeq = a.ifmmSeq
+			 LEFT JOIN infrMemberEmail c ON c.ifmeDelNy = 0 AND c.ifmeDefaultNy = 1 AND c.ifmmSeq = a.ifmmSeq
+			 LEFT JOIN infrMemberPhone d ON d.ifmpDelNy = 0 AND d.ifmpDefaultNy = 1 AND d.ifmmSeq = a.ifmmSeq
+
+			WHERE 1=1
+				AND a.ifmmSeq = #{ifmmSeq}	
+		</select>	
+	
+		<insert id="insert">
 			insert into infrMember (
 				ifmmId
 				,ifmmName
@@ -30,16 +59,37 @@
 				,#{ifmmName}
 				,0
 			)
-	</insert>
+		</insert>
+	
+		<select id="selectOne" resultMap="resultMapObj">
+			select
+				a.ifmmSeq
+				, a.ifmmId
+				, a.ifmmName
+			from
+				infrMember a
+			where 1=1
+			and ifmmSeq = #{ifmmSeq}
+		</select>
+	
 	
 		<update id="update">
-		UPDATE infrMember SET 
-			ifmmName = #{ifmmName}
-		WHERE 1=1
+			UPDATE
+				infrMember  <!-- 진짜 중요한게 테이블 이름틀리면 505 Error 불변임  -->
+			SET 
+				ifmmName = #{ifmmName} <!-- 여기다 여러개 넣으면 여러개 수정 함께 가능 -->
+				,ifmmId = #{ifmmId}
+			WHERE 1=1
 			AND ifmmSeq = #{ifmmSeq}
 		</update>
+		
+		<update id="updateDelete">
+			UPDATE infrMember SET ifmmDelNy = 1 WHERE 1=1 AND ifmmSeq = #{ifmmSeq}
+		</update>
 	
-	
+		<delete id="delete">
+			DELETE FROM	infrMember WHERE 1=1 AND ifmmSeq = #{ifmmSeq}
+		</delete>
 	
 	
 </mapper>
