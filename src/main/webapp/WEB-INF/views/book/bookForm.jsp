@@ -156,7 +156,7 @@
 		 <label for="bookdate">출간일</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
-		 <input type="date" class="form-control" id="bookdate" placeholder="">
+		 <input type="text" class="form-control" id="bookdate" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
@@ -202,7 +202,7 @@
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookupdate">Isbn10</label>
+		 <label for="bookupdate">정보 등록일</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="date" class="form-control" id="bookupdate" placeholder="">

@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>책 정보 등록</title>
+    <title>책 정보 등록</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -120,12 +120,12 @@
       </div>
      </header>
     
-      <h1 class="bookadd">책 정보 등록</h1>
+      <h1 class="bookadd">책 정보 등록</h1>
       
 		<div="row mt-sm-4">
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookname">책 이름</label>
+		 <label for="bookname">책 이름</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookname" placeholder="">
@@ -139,7 +139,7 @@
 		</div>
 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookwrite">저자</label>
+		 <label for="bookwrite">작가</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookwrite" placeholder="">
@@ -160,7 +160,7 @@
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookprice">책 가격</label>
+		 <label for="bookprice">가격</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookprice" placeholder="">
@@ -209,8 +209,8 @@
 		</div>
 						      
 		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-		  <button class="btn btn-dark me-md-2" type="button">ë±ë¡</button>
-		  <button class="btn btn-dark" type="button">ì·¨ì</button>
+		  <button class="btn btn-dark me-md-2" type="button">등록</button>
+		  <button class="btn btn-dark" type="button">취소</button>
 		</div>
       
         </div>     

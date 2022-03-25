@@ -1,28 +1,30 @@
 package com.junefw.infra.modules.book;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 
 public class Book {
 
 private String bkadSeq;
 
+private String bkadExplain;
 private String bkadName;
 private String bkadSub;
 private String bkadWriter;
-private String Publisher;
-private Date bkadPubDate;
-private Integer bkadSales;
-private Integer bkadPrice;
+private String bkadPublisher;
+private String bkadPainter;
+private String bkadTranslator;
+private String bkadPubDate;
+private String bkadSales;
+private String bkadPrice;
 
 private String bkadCharge;
 
-private Integer bkadPage;
-private Integer bkadWeight;
-private Integer bkadSize;
+private String bkadPage;
+private String bkadWeight;
+private String bkadSize;
 	
-private Integer bkadIsbn13;
-private Integer bkadIsbn10;
+private String bkadIsbn13;
+private String bkadIsbn10;
 
 private Integer bkadDelNy;
 private String bkadDesc;
@@ -36,7 +38,7 @@ private Integer bkbrDelNy;
 
 private String bkltMark;
 private Integer bkltReviewCount;
-private Timestamp bkltDate;
+private Date bkltDate;
 private String bkltDesc;
 private Integer bkltDelNy;
 
@@ -45,16 +47,24 @@ private String bknsMove;
 private String bknsPosition;
 private Integer bknsDelNy;
 
-private String bkrwPubReview;
+private String bkrwPubReview1;
+private String bkrwPubReview2;
 private String bkrwMemberReview;
 private String bkrwMemberId;
-private Timestamp bkrwReviewDate;
+private Date bkrwReviewDate;
 private Integer bkrwRecommend;
 private Integer bkrwMark;
 private String bkrwDesc;
 private Integer bkrwDelNy;
 
+//--------------------------------
 
+public String getBkadSeq() {
+	return bkadSeq;
+}
+public void setBkadSeq(String bkadSeq) {
+	this.bkadSeq = bkadSeq;
+}
 public String getBkadName() {
 	return bkadName;
 }
@@ -73,28 +83,25 @@ public String getBkadWriter() {
 public void setBkadWriter(String bkadWriter) {
 	this.bkadWriter = bkadWriter;
 }
-public String getPublisher() {
-	return Publisher;
-}
-public void setPublisher(String publisher) {
-	Publisher = publisher;
-}
-public Date getBkadPubDate() {
+
+
+
+public String getBkadPubDate() {
 	return bkadPubDate;
 }
-public void setBkadPubDate(Date bkadPubDate) {
+public void setBkadPubDate(String bkadPubDate) {
 	this.bkadPubDate = bkadPubDate;
 }
-public Integer getBkadSales() {
+public String getBkadSales() {
 	return bkadSales;
 }
-public void setBkadSales(Integer bkadSales) {
+public void setBkadSales(String bkadSales) {
 	this.bkadSales = bkadSales;
 }
-public Integer getBkadPrice() {
+public String getBkadPrice() {
 	return bkadPrice;
 }
-public void setBkadPrice(Integer bkadPrice) {
+public void setBkadPrice(String bkadPrice) {
 	this.bkadPrice = bkadPrice;
 }
 public String getBkadCharge() {
@@ -103,34 +110,35 @@ public String getBkadCharge() {
 public void setBkadCharge(String bkadCharge) {
 	this.bkadCharge = bkadCharge;
 }
-public Integer getBkadPage() {
+
+public String getBkadPage() {
 	return bkadPage;
 }
-public void setBkadPage(Integer bkadPage) {
+public void setBkadPage(String bkadPage) {
 	this.bkadPage = bkadPage;
 }
-public Integer getBkadWeight() {
+public String getBkadWeight() {
 	return bkadWeight;
 }
-public void setBkadWeight(Integer bkadWeight) {
+public void setBkadWeight(String bkadWeight) {
 	this.bkadWeight = bkadWeight;
 }
-public Integer getBkadSize() {
+public String getBkadSize() {
 	return bkadSize;
 }
-public void setBkadSize(Integer bkadSize) {
+public void setBkadSize(String bkadSize) {
 	this.bkadSize = bkadSize;
 }
-public Integer getBkadIsbn13() {
+public String getBkadIsbn13() {
 	return bkadIsbn13;
 }
-public void setBkadIsbn13(Integer bkadIsbn13) {
+public void setBkadIsbn13(String bkadIsbn13) {
 	this.bkadIsbn13 = bkadIsbn13;
 }
-public Integer getBkadIsbn10() {
+public String getBkadIsbn10() {
 	return bkadIsbn10;
 }
-public void setBkadIsbn10(Integer bkadIsbn10) {
+public void setBkadIsbn10(String bkadIsbn10) {
 	this.bkadIsbn10 = bkadIsbn10;
 }
 public Integer getBkadDelNy() {
@@ -187,10 +195,10 @@ public Integer getBkltReviewCount() {
 public void setBkltReviewCount(Integer bkltReviewCount) {
 	this.bkltReviewCount = bkltReviewCount;
 }
-public Timestamp getBkltDate() {
+public Date getBkltDate() {
 	return bkltDate;
 }
-public void setBkltDate(Timestamp bkltDate) {
+public void setBkltDate(Date bkltDate) {
 	this.bkltDate = bkltDate;
 }
 public String getBkltDesc() {
@@ -229,11 +237,18 @@ public Integer getBknsDelNy() {
 public void setBknsDelNy(Integer bknsDelNy) {
 	this.bknsDelNy = bknsDelNy;
 }
-public String getBkrwPubReview() {
-	return bkrwPubReview;
+
+public String getBkrwPubReview1() {
+	return bkrwPubReview1;
 }
-public void setBkrwPubReview(String bkrwPubReview) {
-	this.bkrwPubReview = bkrwPubReview;
+public void setBkrwPubReview1(String bkrwPubReview1) {
+	this.bkrwPubReview1 = bkrwPubReview1;
+}
+public String getBkrwPubReview2() {
+	return bkrwPubReview2;
+}
+public void setBkrwPubReview2(String bkrwPubReview2) {
+	this.bkrwPubReview2 = bkrwPubReview2;
 }
 public String getBkrwMemberReview() {
 	return bkrwMemberReview;
@@ -247,10 +262,10 @@ public String getBkrwMemberId() {
 public void setBkrwMemberId(String bkrwMemberId) {
 	this.bkrwMemberId = bkrwMemberId;
 }
-public Timestamp getBkrwReviewDate() {
+public Date getBkrwReviewDate() {
 	return bkrwReviewDate;
 }
-public void setBkrwReviewDate(Timestamp bkrwReviewDate) {
+public void setBkrwReviewDate(Date bkrwReviewDate) {
 	this.bkrwReviewDate = bkrwReviewDate;
 }
 public Integer getBkrwRecommend() {
@@ -277,12 +292,31 @@ public Integer getBkrwDelNy() {
 public void setBkrwDelNy(Integer bkrwDelNy) {
 	this.bkrwDelNy = bkrwDelNy;
 }
-public String getBkadSeq() {
-	return bkadSeq;
+public String getBkadPublisher() {
+	return bkadPublisher;
 }
-public void setBkadSeq(String bkadSeq) {
-	this.bkadSeq = bkadSeq;
+public void setBkadPublisher(String bkadPublisher) {
+	this.bkadPublisher = bkadPublisher;
 }
+public String getBkadExplain() {
+	return bkadExplain;
+}
+public void setBkadExplain(String bkadExplain) {
+	this.bkadExplain = bkadExplain;
+}
+public String getBkadPainter() {
+	return bkadPainter;
+}
+public void setBkadPainter(String bkadPainter) {
+	this.bkadPainter = bkadPainter;
+}
+public String getBkadTranslator() {
+	return bkadTranslator;
+}
+public void setBkadTranslator(String bkadTranslator) {
+	this.bkadTranslator = bkadTranslator;
+}
+
 
 
 }

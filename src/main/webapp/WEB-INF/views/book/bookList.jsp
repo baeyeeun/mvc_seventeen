@@ -162,7 +162,7 @@
 	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
 	     <td scope="col"><c:out value="${item.bkadSeq}"/></td>
 	     <td scope="col"><c:out value="${item.bkadName}"/></td>
-	     <td scope="col"><c:out value="${item.bkadWrite}"/></td>
+	     <td scope="col"><c:out value="${item.bkadWriter}"/></td>
 	     <td scope="col"><c:out value="${item.bkadPublisher}"/></td>
 	     <td scope="col"><c:out value="${item.bkadUpdate}"/></td>     
 	    </tr>	      

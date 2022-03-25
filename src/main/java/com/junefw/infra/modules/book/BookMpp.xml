@@ -25,9 +25,13 @@
 		<select id="selectList" resultMap="resultMapObj">
 			SELECT
 				bkadSeq
+				,bkadName
 			 	,bkadSub
 			 	,bkadWriter
 			 	,bkadPublisher
+			 	,bkadPainter
+			 	,bkadTranslator
+			 	,bkadExplain
 			 	,bkadPubDate
 			 	,bkadSales
 			 	,bkadPage
