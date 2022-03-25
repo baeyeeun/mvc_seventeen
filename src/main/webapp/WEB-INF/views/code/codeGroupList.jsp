@@ -138,20 +138,35 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">코드 그룹 이름</th> 
+	     <td scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></td>
+	     <td scope="col">번호</td>
+	     <td scope="col">코드 그룹 이름</td>
+	     <td scope="col">삭제 여부</td>  
 	    </tr>
 	   </thead>
 
 	   <tbody>
 
+	 <c:choose>
+	<c:when test="${fn:length(list) eq 0}">
+		<tr>
+			<td class="text-center" colspan="9">There is no data!</td>
+		</tr>	
+	</c:when>
+	<c:otherwise>
+		<c:forEach items="${list}" var="item" varStatus="status">	
+		
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">코드 그룹 이름</th>
+	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
+	     <td scope="col"><c:out value="${item.ifcgSeq}"/></td>
+	     <td scope="col"><c:out value="${item.ifcgName}"/></td>
+	     <td scope="col"><c:out value="${item.ifcgDelNy}"/></td>
 	    </tr>	      
  
+ 		</c:forEach>
+	</c:otherwise>
+</c:choose>	 
+
 	    </tbody>
 	   </table>
 

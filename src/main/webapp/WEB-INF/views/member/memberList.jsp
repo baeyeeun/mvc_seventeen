@@ -139,10 +139,10 @@
 	   <thead class="table-dark">
 	    <tr>
 	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
-	     <th scope="col">번호</th>
-	     <th scope="col">이름</th>
-	     <th scope="col">아이디</th>
-	     <th scope="col">연락처</th>	     
+	     <td scope="col">번호</td>
+	     <td scope="col">이름</td>
+	     <td scope="col">아이디</td>
+	     <td scope="col">연락처</td>	     
 	    </tr>
 	   </thead>
 

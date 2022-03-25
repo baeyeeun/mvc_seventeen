@@ -138,12 +138,12 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">책 이름</th>
-	     <th scope="col">저자</th>
-	     <th scope="col">출판사</th>
-	     <th scope="col">책 정보 등록일</th>	 	     
+	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
+	     <td scope="col">번호</td>
+	     <td scope="col">책 이름</td>
+	     <td scope="col">저자</td>
+	     <td scope="col">출판사</td>
+	     <td scope="col">책 정보 등록일</td>	 	     
 	    </tr>
 	   </thead>
 
@@ -159,7 +159,7 @@
 		<c:forEach items="${list}" var="item" varStatus="status">	
 		
 	    <tr>
-	     <th scope="col">체크박스</th>
+	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
 	     <td scope="col"><c:out value="${item.bkadSeq}"/></td>
 	     <td scope="col"><c:out value="${item.bkadName}"/></td>
 	     <td scope="col"><c:out value="${item.bkadWrite}"/></td>
