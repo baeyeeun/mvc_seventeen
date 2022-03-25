@@ -200,6 +200,13 @@
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookIsbn10" placeholder="">
 		</div>
+		
+		<div class="col-sm-6 mt-3 mt-sm-0">
+		 <label for="bookupdate">Isbn10</label>
+		</div>
+		<div class="input-group col-sm-6 mb-3">
+		 <input type="date" class="form-control" id="bookupdate" placeholder="">
+		</div>
 						      
 		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 		  <button class="btn btn-dark me-md-2" type="button">등록</button>

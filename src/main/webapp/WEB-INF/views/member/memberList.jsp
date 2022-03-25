@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!doctype html>
 <html lang="kor">
   <head>
@@ -118,7 +125,7 @@
       </div>
       
       <div class="col-3 md-6 px-0">        
-       <input type="password" class="form-control" id="password" placeholder="검색어를 입력하세요.">
+       <input type="text" class="form-control" id="reseachbar" placeholder="검색어를 입력하세요.">
        <button type="button" class="btn btn-warning">검색</button>
        <button type="button" class="btn btn-danger">초기화</button>     
       </div>   
@@ -158,7 +165,7 @@
 	<div class="row">
 	 <div class="col">
 	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-	   <button class="btn btn-dark" type="button">수정</button>
+	   <button class="btn btn-dark" type="button">등록</button>
 	   <button class="btn btn-dark" type="button">삭제</button>
 	 </div>
 	 </div>

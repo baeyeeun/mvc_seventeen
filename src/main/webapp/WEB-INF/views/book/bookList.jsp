@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>ì± ì ë³´ ê´ë¦¬</title>
+    <title>책 정보 관리</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -32,12 +32,13 @@
     
 	}
 	
-	.book{
+	.member{
 	
     font-family: 'EliceDigitalBaeum-Bd';	
 	text-align: center;
 	
 	padding: 30px 0px 30px 0px;
+	
 	}
 	
 	 .menu{
@@ -51,31 +52,31 @@
     .bodybody{
     
     font-family: 'Cafe24SsurroundAir';
-    font-size: 15px;
+    font-size: 14px;
     
     }
-    
+
     @font-face {
     font-family: 'Y_Spotlight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	}
-
+	
     @font-face {
     font-family: 'EliceDigitalBaeum-Bd';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-	}
-	
+}
+
     @font-face {
     font-family: 'Cafe24SsurroundAir';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     }
-    
+    	
   </style>
   <body class="bodybody">
 
@@ -90,10 +91,10 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì½ë ê·¸ë£¹ ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">íì ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ë¦¬ë·° ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì± ì ë³´ ê´ë¦¬</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">코드 그룹 관리</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">회원 관리</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">리뷰 관리</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">책 정보 관리</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
@@ -102,33 +103,33 @@
       </div>
     </header>
 	
-	<h1 class="book">ì± ì ë³´ ê´ë¦¬</h1>
+	<h1 class="member">책 정보 관리</h1>
 	
     <div class="p-4 p-md-5 mb-4 text-dark rounded bg-light">
 	 
     <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>ì­ì  ì¬ë¶</option>
+     <option selected>삭제 여부</option>
      <option value="1">N</option>
      <option value="2">Y</option>
     </select>
     </div>
- 
-     <div class="col-3 md-6 px-0"> 
+        
+    <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>ê²ì ì¡°ê±´</option>
-     <option value="1">ëì ì ëª©</option>
-     <option value="2">ì§ìì´</option>
-     <option value="3">ì¶íì¬</option>
+     <option selected>검색 조건</option>
+     <option value="1">책 제목</option>
+     <option value="2">저자</option>
+     <option value="3">출판사</option>
      </select>
       </div>
-           
+      
       <div class="col-3 md-6 px-0">        
-       <input type="password" class="form-control" id="password" placeholder="ê²ìì´ë¥¼ ìë ¥íì¸ì.">
-       <button type="button" class="btn btn-warning">ê²ì</button>
-       <button type="button" class="btn btn-danger">ì´ê¸°í</button>     
+       <input type="text" class="form-control" id="reseachbar" placeholder="검색어를 입력하세요.">
+       <button type="button" class="btn btn-warning">검색</button>
+       <button type="button" class="btn btn-danger">초기화</button>     
       </div>   
-  </div>
+      </div>
   
 	<div class="row">
 	 <div class="col">
@@ -137,24 +138,24 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">ì²´í¬ë°ì¤</th>
-	     <th scope="col">ë²í¸</th>
-	     <th scope="col">ëì ì´ë¦</th> 
-	     <th scope="col">ì§ìì´</th>
-	     <th scope="col">ì¶íì¬</th>
-	     <th scope="col">ì± ë±ë¡ ì¼ì</th>	       
+	     <th scope="col">체크박스</th>
+	     <th scope="col">번호</th>
+	     <th scope="col">책 이름</th>
+	     <th scope="col">저자</th>
+	     <th scope="col">출판사</th>
+	     <th scope="col">책 정보 등록일</th>	 	     
 	    </tr>
 	   </thead>
 
 	   <tbody>
 
 	    <tr>
-	     <th scope="col">ì²´í¬ë°ì¤</th>
-	     <th scope="col">ë²í¸</th>
-	     <th scope="col">ëì ì´ë¦</th>
-	     <th scope="col">ì§ìì´</th>
-	     <th scope="col">ì¶íì¬</th>
-	     <th scope="col">ì± ë±ë¡ ì¼ì</th> 	 	     
+	     <th scope="col">체크박스</th>
+	     <th scope="col">번호</th>
+	     <th scope="col">책 이름</th>
+	     <th scope="col">저자</th>
+	     <th scope="col">출판사</th>
+	     <th scope="col">책 정보 등록일</th>     
 	    </tr>	      
  
 	    </tbody>
@@ -166,8 +167,8 @@
 	<div class="row">
 	 <div class="col">
 	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-	   <button class="btn btn-dark" type="button">ë±ë¡</button>
-	   <button class="btn btn-dark" type="button">ì­ì </button>
+	   <button class="btn btn-dark" type="button">등록</button>
+	   <button class="btn btn-dark" type="button">삭제</button>
 	 </div>
 	 </div>
 	</div>

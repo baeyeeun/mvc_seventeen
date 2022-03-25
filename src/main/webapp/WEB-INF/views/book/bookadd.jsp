@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>ì± ì ë³´ ë±ë¡</title>
+    <title>책 정보 등록</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -108,10 +108,10 @@
 
        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
        <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì½ë ê·¸ë£¹ ê´ë¦¬</a></li>      
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">íì ê´ë¦¬</a></li>
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">ë¦¬ë·° ê´ë¦¬</a></li>
-       <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì± ì ë³´ ê´ë¦¬</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">코드 그룹 관리</a></li>      
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">회원 관리</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">리뷰 관리</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">책 정보 관리</a></li>
        </ul>
 
       <div class="col-md-3 text-end">
@@ -120,68 +120,68 @@
       </div>
      </header>
     
-      <h1 class="bookadd">ì± ì ë³´ ë±ë¡</h1>
+      <h1 class="bookadd">책 정보 등록</h1>
       
 		<div="row mt-sm-4">
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookname">ì± ì´ë¦</label>
+		 <label for="bookname">책 이름</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookname" placeholder="">
 		</div>
     	 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="booksub">ì± ë¶ì </label>
+		 <label for="booksub">책 부제</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="booksub" placeholder="">
 		</div>
 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookwrite">ìê°</label>
+		 <label for="bookwrite">저자</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookwrite" placeholder="">
 		</div>	
 
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookpub">ì¶íì¬</label>
+		 <label for="bookpub">출판사</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookpub" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookdate">ì¶ê°ì¼</label>
+		 <label for="bookdate">출간일</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="date" class="form-control" id="bookdate" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookprice">ê°ê²©</label>
+		 <label for="bookprice">책 가격</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookprice" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookpage">ì± íì´ì§</label>
+		 <label for="bookpage">책 페이지</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookpage" placeholder="">
 		</div>
 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="bookweight">ì± ë¬´ê²</label>
+		 <label for="bookweight">책 무게</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookweight" placeholder="">
 		</div>
 		    	 		
 		<div class="col-sm-6 mt-3 mt-sm-0">
-		 <label for="booksize">ì± ì¬ì´ì¦</label>
+		 <label for="booksize">책 사이즈</label>
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="booksize" placeholder="">
@@ -199,6 +199,13 @@
 		</div>
 		<div class="input-group col-sm-6 mb-3">
 		 <input type="text" class="form-control" id="bookIsbn10" placeholder="">
+		</div>
+		
+		<div class="col-sm-6 mt-3 mt-sm-0">
+		 <label for="bookupdate">Isbn10</label>
+		</div>
+		<div class="input-group col-sm-6 mb-3">
+		 <input type="date" class="form-control" id="bookupdate" placeholder="">
 		</div>
 						      
 		<div class="d-grid gap-2 d-md-flex justify-content-md-end">

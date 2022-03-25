@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>ì½ë ê·¸ë£¹ ê´ë¦¬</title>
+    <title>코드 그룹 관리</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
@@ -89,13 +89,13 @@
        <h1 class="logo"><font color="#bebebe">YES</font><font color="#0064FF">24</font></h1>
       </a>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì½ë ê·¸ë£¹ ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">íì ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ë¦¬ë·° ê´ë¦¬</a></li>
-        <li class="menu"><a href="#" class="nav-link px-2 link-dark">ì± ì ë³´ ê´ë¦¬</a></li>
-      </ul>
+       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+       <li class="menu"><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li class="menu"><a href="#" class="nav-link px-2 link-dark">코드 그룹 관리</a></li>      
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">회원 관리</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">리뷰 관리</a></li>
+       <li class="menu"><a href="#" class="nav-link px-2 link-dark">책 정보 관리</a></li>
+       </ul>
 
       <div class="col-md-3 text-end">
         <button type="button" class="btn btn-outline-dark me-2">Login</button>
@@ -103,13 +103,13 @@
       </div>
     </header>
 	
-	<h1 class="codegroup">ì½ë ê·¸ë£¹ ê´ë¦¬</h1>
+	<h1 class="codegroup">코드 그룹 관리</h1>
 	
     <div class="p-4 p-md-5 mb-4 text-dark rounded bg-light">
 	 
     <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>ì­ì  ì¬ë¶</option>
+     <option selected>삭제 여부</option>
      <option value="1">N</option>
      <option value="2">Y</option>
     </select>
@@ -117,18 +117,19 @@
         
     <div class="col-3 md-6 px-0"> 
      <select class="form-select" aria-label="Default select example">
-     <option selected>ê²ì ì¡°ê±´</option>
-     <option value="1">ìë¬¸</option>
-     <option value="2">íê¸</option>
+     <option selected>검색 조건</option>
+     <option value="1">영문</option>
+     <option value="2">한글</option>
      </select>
       </div>
       
       <div class="col-3 md-6 px-0">        
-       <input type="password" class="form-control" id="password" placeholder="ê²ìì´ë¥¼ ìë ¥íì¸ì.">
-       <button type="button" class="btn btn-warning">ê²ì</button>
-       <button type="button" class="btn btn-danger">ì´ê¸°í</button>     
-      </div>   
-  </div>
+       <input type="text" class="form-control" id="reseachbar" placeholder="검색어를 입력하세요.">
+       <button type="button" class="btn btn-warning">검색</button>
+       <button type="button" class="btn btn-danger">초기화</button>     
+      </div> 
+        
+  	</div>
   
 	<div class="row">
 	 <div class="col">
@@ -137,18 +138,18 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">ì²´í¬ë°ì¤</th>
-	     <th scope="col">ë²í¸</th>
-	     <th scope="col">ì½ë ê·¸ë£¹ ì´ë¦</th> 
+	     <th scope="col">체크박스</th>
+	     <th scope="col">번호</th>
+	     <th scope="col">코드 그룹 이름</th> 
 	    </tr>
 	   </thead>
 
 	   <tbody>
 
 	    <tr>
-	     <th scope="col">ì²´í¬ë°ì¤</th>
-	     <th scope="col">ë²í¸</th>
-	     <th scope="col">ì½ë ê·¸ë£¹ ì´ë¦</th>
+	     <th scope="col">체크박스</th>
+	     <th scope="col">번호</th>
+	     <th scope="col">코드 그룹 이름</th>
 	    </tr>	      
  
 	    </tbody>
@@ -157,18 +158,10 @@
 	 </div>
 	</div>
 
-	<div class="row">
-	 <div class="col">
 	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-	   <button class="btn btn-dark" type="button">ë±ë¡</button>
-	   <button class="btn btn-dark" type="button">ì­ì </button>
+	   <button class="btn btn-dark" type="button">등록</button>
+	   <button class="btn btn-dark" type="button">삭제</button>
 	 </div>
-	 </div>
-	</div>
-
-	<div class="row">
-	 <div class="col">
-	 
 
   </ul>
 </nav>
