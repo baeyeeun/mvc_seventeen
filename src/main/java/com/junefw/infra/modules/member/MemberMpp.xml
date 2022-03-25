@@ -8,13 +8,16 @@
 
     <resultMap id="resultMapObj" type="com.junefw.infra.modules.member.Member"></resultMap>
 
+	
 	<select id="selectList" resultMap="resultMapObj">
 			select
 				ifmmSeq
 				, ifmmId
 				, ifmmName
+                , ifmmDelNy
 			from
 				infrMember
+
 	</select>
 	
 	<insert id="insert">
@@ -28,4 +31,15 @@
 				,0
 			)
 	</insert>
+	
+		<update id="update">
+		UPDATE infrMember SET 
+			ifmmName = #{ifmmName}
+		WHERE 1=1
+			AND ifmmSeq = #{ifmmSeq}
+		</update>
+	
+	
+	
+	
 </mapper>

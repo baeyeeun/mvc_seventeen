@@ -6,5 +6,6 @@ public interface MemberService {
 	
 	public List<Member> selectList() throws Exception; 
 	public int insert(Member dto) throws Exception; 
-
+	int update(Member dto) throws Exception;
+	
 }

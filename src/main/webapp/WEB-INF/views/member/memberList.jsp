@@ -138,7 +138,7 @@
 
 	   <thead class="table-dark">
 	    <tr>
-	     <th scope="col">체크박스</th>
+	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
 	     <th scope="col">번호</th>
 	     <th scope="col">이름</th>
 	     <th scope="col">아이디</th>
@@ -148,14 +148,27 @@
 
 	   <tbody>
 
+	 <c:choose>
+	<c:when test="${fn:length(list) eq 0}">
+		<tr>
+			<td class="text-center" colspan="9">There is no data!</td>
+		</tr>	
+	</c:when>
+	<c:otherwise>
+		<c:forEach items="${list}" var="item" varStatus="status">	
+		
+		
 	    <tr>
-	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">이름</th>
-	     <th scope="col">아이디</th>
-	     <th scope="col">연락처</th>	     
-	    </tr>	      
- 
+	     <th scope="col"><input class="form-check-input" type="checkbox" value="" id="check"></th>
+	     <td scope="col"><c:out value="${item.ifmmSeq}"/></td>
+	     <td scope="col"><c:out value="${item.ifmmName}"/></td>
+	     <td scope="col"><c:out value="${item.ifmmId}"/></td>
+	     <td scope="col"><c:out value="${item.ifmpNumber}"/></td>	     
+	    </tr>	    
+	      
+		</c:forEach>
+	</c:otherwise>
+</c:choose>	  
 	    </tbody>
 	   </table>
 
