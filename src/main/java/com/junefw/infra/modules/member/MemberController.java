@@ -21,6 +21,10 @@ public class MemberController {
 		List<Member> list = service.selectList(vo);
 		model.addAttribute("list", list);
 
+		for(Member tmp: list) {
+			System.out.println(tmp.getIfmmName());
+		}
+		
 		return "member/memberList";
 	}
 	

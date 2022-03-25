@@ -149,14 +149,27 @@
 
 	   <tbody>
 
+ <c:choose>
+	<c:when test="${fn:length(list) eq 0}">
+		<tr>
+			<td class="text-center" colspan="9">There is no data!</td>
+		</tr>	
+	</c:when>
+	<c:otherwise>
+		<c:forEach items="${list}" var="item" varStatus="status">	
+		
 	    <tr>
 	     <th scope="col">체크박스</th>
-	     <th scope="col">번호</th>
-	     <th scope="col">책 이름</th>
-	     <th scope="col">저자</th>
-	     <th scope="col">출판사</th>
-	     <th scope="col">책 정보 등록일</th>     
+	     <td scope="col"><c:out value="${item.bkadSeq}"/></td>
+	     <td scope="col"><c:out value="${item.bkadName}"/></td>
+	     <td scope="col"><c:out value="${item.bkadWrite}"/></td>
+	     <td scope="col"><c:out value="${item.bkadPublisher}"/></td>
+	     <td scope="col"><c:out value="${item.bkadUpdate}"/></td>     
 	    </tr>	      
+
+		</c:forEach>
+	</c:otherwise>
+</c:choose>	  
  
 	    </tbody>
 	   </table>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.junefw.infra.modules.book.BookMpp">
+
+    <resultMap id="resultMapObj" type="com.junefw.infra.modules.book.Book"></resultMap>
+
+		<sql id="selectCommon">
+			FROM  
+				book a 
+			WHERE 1=1
+				AND bkadDelNy = 0
+		</sql>
+	
+		<select id="selectOneCount" resultType="Integer">
+			SELECT
+				count(*)
+		<include refid="selectCommon" />
+
+		</select>
+	
+		<select id="selectList" resultMap="resultMapObj">
+			SELECT
+				bkadSeq
+			 	,bkadSub
+			 	,bkadWriter
+			 	,bkadPublisher
+			 	,bkadPubDate
+			 	,bkadSales
+			 	,bkadPage
+			 	,bkadWeight
+			 	,bkadSize
+			 	,bkadIsbn13
+			 	,bkadIsbn10
+			 	,bkadDelNy
+			 	,bkadDesc
+			 	,bkadUpdate
+			 				 				 			 	
+			 FROM
+				book a
+			WHERE 1=1
+
+		</select>	
+	
+		<insert id="insert">
+			insert into book (
+				bkadName
+				,bkadWriter
+				,bkadNameDelNy
+			) values (
+				#{bkadName}
+				,#{bkadWriter}
+				,0
+			)
+		</insert>
+	
+		<select id="selectOne" resultMap="resultMapObj">
+			select
+				a.bkadSeq
+				, a.bkadName
+				, a.bkadWriter
+			from
+				book a
+			where 1=1
+			and bkadSeq = #{bkadSeq}
+		</select>
+	
+	
+		<update id="update">
+			UPDATE
+				book  <!-- 진짜 중요한게 테이블 이름틀리면 505 Error 불변임  -->
+			SET 
+				bkadName = #{bkadName} <!-- 여기다 여러개 넣으면 여러개 수정 함께 가능 -->
+				,bkadWriter = #{bkadWriter}
+			WHERE 1=1
+			AND bkadSeq = #{bkadSeq}
+		</update>
+		
+		<update id="updateDelete">
+			UPDATE book SET bkadDelNy = 1 WHERE 1=1 AND bkadSeq = #{bkadSeq}
+		</update>
+	
+		<delete id="delete">
+			DELETE FROM	book WHERE 1=1 AND bkadSeq = #{bkadSeq}
+		</delete>
+	
+	
+</mapper>
