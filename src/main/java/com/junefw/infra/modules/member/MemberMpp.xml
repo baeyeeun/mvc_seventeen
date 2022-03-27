@@ -46,7 +46,6 @@
 			 LEFT JOIN infrMemberPhone d ON d.ifmpDelNy = 0 AND d.ifmpDefaultNy = 1 AND d.ifmmSeq = a.ifmmSeq
 
 			WHERE 1=1
-				AND a.ifmmSeq = #{ifmmSeq}	
 		</select>	
 	
 		<insert id="insert">
